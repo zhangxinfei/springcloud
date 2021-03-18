@@ -1,6 +1,8 @@
 package com.fei.user.controller;
 
 import com.fei.user.clients.ProductClients;
+import com.fei.user.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,11 +18,11 @@ import javax.annotation.Resource;
 @RequestMapping("/user")
 public class UserController {
 
-    @Resource
-    private ProductClients productClients;
+    @Autowired
+    private UserService userService;
 
     @GetMapping("/getUser")
     public Object getUser(){
-        return productClients.getProduct();
+        return userService.getUser();
     }
 }

@@ -15,9 +15,7 @@ import org.springframework.stereotype.Controller;
 @SpringBootApplication
 @EnableDiscoveryClient   //开启服务注册与发现，可写可不写
 @EnableFeignClients(value = "com.fei.user.clients")      //开启openfeign
-@ComponentScan(excludeFilters = {
-		@ComponentScan.Filter(type = FilterType.ANNOTATION,value = {Controller.class})
-})
+@ComponentScan(basePackages = {"com.fei.user.service.impl"})
 public class UserApplication {
 
 	public static void main(String[] args) {
