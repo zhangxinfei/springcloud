@@ -1,6 +1,4 @@
-package com.fei.user.utils;
-
-import sun.misc.Unsafe;
+package com.fei.user.study.aqs;
 
 /**
  * @author: zhangxinfei

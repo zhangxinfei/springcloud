@@ -1,4 +1,4 @@
-package com.fei.user.utils;
+package com.fei.user.study.aqs;
 
 import com.fei.user.entity.User;
 

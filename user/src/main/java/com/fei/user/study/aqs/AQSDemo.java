@@ -1,6 +1,5 @@
-package com.fei.user.utils;
+package com.fei.user.study.aqs;
 
-import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**

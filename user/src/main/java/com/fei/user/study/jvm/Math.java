@@ -1,6 +1,6 @@
-package com.fei.user.utils;
+package com.fei.user.study.jvm;
 
-import java.util.Map;
+import com.fei.user.entity.User;
 
 /**
  * @author: zhangxinfei
@@ -9,7 +9,8 @@ import java.util.Map;
  */
 public class Math {
 
-    public static int initData = 0;
+    public static int initData = 666;
+    public static User user = new User();
 
     public int compute(){
         int a = 1;

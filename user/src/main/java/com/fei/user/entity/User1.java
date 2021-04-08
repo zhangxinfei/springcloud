@@ -1,7 +1,6 @@
 package com.fei.user.entity;
 
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 /**
  * @author: zhangxinfei
@@ -9,7 +8,7 @@ import lombok.NoArgsConstructor;
  * @description: user entity
  */
 @Data
-public class User {
+public class User1 {
 
     static {
         System.out.println("执行User静态代码");
@@ -19,12 +18,12 @@ public class User {
 
     private Integer age;
 
-    public User(String name, Integer age){
+    public User1(String name, Integer age){
         this.name = name;
         this.age = age;
     }
 
-    public User(){
+    public User1(){
         sout();
     }
     public void sout(){
