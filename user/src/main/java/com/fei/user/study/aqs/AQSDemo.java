@@ -1,5 +1,6 @@
 package com.fei.user.study.aqs;
 
+import java.util.concurrent.locks.LockSupport;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
@@ -44,16 +45,29 @@ public class AQSDemo {
     }
 
     public static void main(String[] args) throws InterruptedException {
-        AQSDemo aqs = new AQSDemo();
-        new Thread(()->{
-            String threadName = Thread.currentThread().getName();
-            aqs.modifyResource(threadName);
-        },"Thread:线程1").start();
+//        AQSDemo aqs = new AQSDemo();
+//        new Thread(()->{
+//            String threadName = Thread.currentThread().getName();
+//            aqs.modifyResource(threadName);
+//        },"Thread:线程1").start();
+//
+////        Thread.sleep(1000);
+//        new Thread(()->{
+//            String threadName = Thread.currentThread().getName();
+//            aqs.modifyResource(threadName);
+//        },"Thread:线程2").start();
 
-//        Thread.sleep(1000);
-        new Thread(()->{
-            String threadName = Thread.currentThread().getName();
-            aqs.modifyResource(threadName);
-        },"Thread:线程2").start();
+
+
+
+        ReentrantLock lock = new ReentrantLock(false);//false为非公平锁，true为公平锁
+        lock.lock();//加锁
+            while (true){
+//                if ()
+                //进行阻塞
+                LockSupport.park();
+                //放开阻塞
+//                LockSupport.unpark();
+            }
     }
 }

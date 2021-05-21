@@ -2,6 +2,8 @@ package com.fei.user.study.jvm;
 
 import com.fei.user.entity.User;
 
+import javax.servlet.http.HttpServletRequest;
+
 /**
  * @author: zhangxinfei
  * create at:  2021/4/1  5:10 下午
@@ -22,5 +24,6 @@ public class Math {
     public static void main(String[] args) {
         Math math = new Math();
         math.compute();
+        initData = initData + 1;
     }
 }

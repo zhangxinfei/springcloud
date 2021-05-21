@@ -78,13 +78,13 @@ public class MyClassLoaderTes {
             //初始化自定义类加载器，会先初始化父类ClassLoader，
             //其中会把自定义类加载器的父加载器设置为应用程序类加载器AppClassLoader
             MyClassLoader classLoader = new MyClassLoader("/Users/zhangxinfei/Documents/project/springcloud/user/src/main/java/");
-            //D盘创建 test/com/tuling/jvm 几级目录，将User类的复制类User1.class丢入该目录
+//            //D盘创建 test/com/tuling/jvm 几级目录，将User类的复制类User1.class丢入该目录
             Class clazz = classLoader.loadClass("java.lang.String.class");
-            Object obj = clazz.newInstance();
-            System.out.println("obj====" + obj);
-//            Method method = clazz.getDeclaredMethod("sout", null);
-//            method.invoke(obj, null);
-            System.out.println(clazz.getClassLoader().getClass().getName());
+//            Object obj = clazz.newInstance();
+//            System.out.println("obj====" + obj);
+////            Method method = clazz.getDeclaredMethod("sout", null);
+////            method.invoke(obj, null);
+//            System.out.println(clazz.getClassLoader().getClass().getName());
         }
     }
 }
