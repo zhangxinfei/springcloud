@@ -1,7 +1,10 @@
 package com.fei.user.study.sort;
 
+import com.sun.org.apache.xpath.internal.operations.Bool;
+
 import java.util.Arrays;
 import java.util.Map;
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * @author: zhangxinfei
@@ -169,36 +172,11 @@ public class Sort {
 
     public static void main(String[] args){
         int[] arr = {3,8,1,9,2,7,4,5,6};
-        sort2(arr,0, arr.length-1);
+        quickSort(arr,0, arr.length-1);
         for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + " ");
         }
     }
-
-
-    public static void sort2(int[] arr, int low,int high){
-        if (low < high){
-            int index = getIndex1(arr,low,high);
-            sort2(arr,0,index-1);
-            sort2(arr,index+1,high);
-        }
-    }
-    public static int getIndex1(int[] arr,int low,int high){
-        int temp = arr[low];
-        while(low < high){
-            while (low < high && arr[high] >= temp){
-                high--;
-            }
-            arr[low] = arr[high];
-            while (low < high && arr[low] <= temp){
-                low++;
-            }
-            arr[high] = arr[low];
-        }
-        arr[low] = temp;
-        return low;
-    }
-
 
 
 }
